@@ -1,5 +1,9 @@
 
-document.getElementById("btnsubmit").onmousedown = function () {
+var submited = document.querySelector("#entry");
+
+submited.addEventListener("submit", function (e) {
+
+    e.preventDefault();
 
     // declaring variable with entered values
     var infoot = document.getElementById("idvalue").value;
@@ -14,7 +18,7 @@ document.getElementById("btnsubmit").onmousedown = function () {
 
     }
     else if (typeof infoot === 'string') {
-        incm.innerHTML = "Please enter a valid number!"; 
+        incm.innerHTML = "Please enter a valid number!";
 
     }
 
@@ -24,4 +28,4 @@ document.getElementById("btnsubmit").onmousedown = function () {
         return x + " cm";
     }
 
-}
+});
